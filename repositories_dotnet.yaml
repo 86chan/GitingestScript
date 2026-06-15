@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=repositories_schema.json
+
+# repositories.yaml
+repositories:
+  # 例: output_dir を個別指定し、特定のサブディレクトリ配下に隔離して保存する設定
+  # - name: "dotnet/dotnet/tree/v9.0.116/src/efcore/src/EFCore.Relational"
+  #   pattern_type: "exclude"
+  #   pattern: "*.md, *.json"
+  #   output_dir: "./efcore_output/relational"
+
+  - name: "https://github.com/dotnet/docs"
+    pattern_type: "include"
+    pattern: "/api/*, /docs/*, /includes/*, /samples/*"
+    output_dir: "./dotnet/docs"
+
+  - name: "https://github.com/dotnet/roslyn"
+    pattern_type: "include"
+    pattern: "/docs/*"
+    output_dir: "./dotnet/roslyn"
+
+  - name: "https://github.com/dotnet/runtime"
+    pattern_type: "include"
+    pattern: "/docs/*"
+    output_dir: "./dotnet/runtime"
+
+  - name: "https://github.com/dotnet/EntityFramework.Docs"
+    pattern_type: "exclude"
+    pattern: ".agents/*, .github/*, .vscode/*, ThirdPartyNotices, LICENSE*, /*.json, /*.git*"
+    output_dir: "./dotnet/EntityFramework.Docs"
+
+  - name: "https://github.com/MicrosoftDocs/communitytoolkit"
+    pattern_type: "include"
+    pattern: "/docs/*, /*.md"
+    output_dir: "./MicrosoftDocs/communitytoolkit"
