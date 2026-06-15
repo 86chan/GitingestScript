@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=repositories_schema.json
+
+# repositories.yaml
+repositories:
+  # 例: output_dir を個別指定し、特定のサブディレクトリ配下に隔離して保存する設定
+  # - name: "dotnet/dotnet/tree/v9.0.116/src/efcore/src/EFCore.Relational"
+  #   pattern_type: "exclude"
+  #   pattern: "*.md, *.json"
+  #   output_dir: "./efcore_output/relational"
+
+  - name: "https://github.com/"
+    pattern_type: "include"
+    pattern: "/docs"
+    output_dir: ""

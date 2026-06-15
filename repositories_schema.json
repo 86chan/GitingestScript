@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "repositories": {
+            "type": "array",
+            "$comment": "リポジトリ定義",
+            "items": {
+                "type": "object",
+                "$comment": "",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "$comment": "リポジトリ名(URLでも可)"
+                    },
+                    "pattern_type": {
+                        "enum": [
+                            "include",
+                            "exclude"
+                        ],
+                        "$comment": "パターンの機能指定"
+                    },
+                    "pattern": {
+                        "type": "string",
+                        "$comment": "除外もしくは含めるファイル／ディレクトリを指定"
+                    },
+                    "output_dir": {
+                        "type": "string",
+                        "$comment": "出力先指定"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            }
+        }
+    },
+    "required": [
+        "repositories"
+    ]
+}
